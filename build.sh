@@ -10,6 +10,7 @@ fi
 echo "sudo nixos-rebuild switch"
 sudo nixos-rebuild switch
 if [[ $? -eq 0 ]]; then
+    echo "----------------------------------------"
     echo "Build successful - commiting to git"
     cp /etc/nixos/configuration.nix ./configuration.nix
     cp /etc/nixos/hardware-configuration.nix ./hardware-configuration.nix
