@@ -63,6 +63,8 @@
     gnome-calendar
     gnome-tour
   ];
+  
+
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -123,6 +125,7 @@
     discord
     bash
     ungoogled-chromium
+    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
