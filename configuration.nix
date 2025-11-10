@@ -123,7 +123,6 @@
     discord
     bash
     ungoogled-chromium
-    kitty
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
