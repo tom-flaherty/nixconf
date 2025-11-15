@@ -128,6 +128,7 @@
 
     # C
     gcc-arm-embedded
+    libgcc
     cmake
 
     # Bash
