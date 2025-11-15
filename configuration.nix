@@ -124,6 +124,9 @@
 
     # General Development
     git
+    
+    # C
+    gcc-arm-embedded
     cmake
     #make
 
