@@ -53,6 +53,9 @@
   # Enable the GNOME Desktop Environment.
   services.xserver.displayManager.gdm.enable = true;
   services.xserver.desktopManager.gnome.enable = true;
+
+  # Enabled flakes
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
   
   # TF Disable unused gnome core applications
   environment.gnome.excludePackages = with pkgs; [
