@@ -125,6 +125,7 @@
     bash
     ungoogled-chromium
     gnome-terminal
+    cmake
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
