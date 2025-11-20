@@ -131,6 +131,7 @@
     
     pkg-config
     libgcc
+    gnumake
     cmake
   ];
 
