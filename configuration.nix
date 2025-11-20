@@ -128,6 +128,10 @@
     bash
     ungoogled-chromium
     gnome-terminal
+    
+    pkg-config
+    libgcc
+    cmake
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
