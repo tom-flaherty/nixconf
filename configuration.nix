@@ -105,7 +105,10 @@
     description = "Tom Flaherty";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-    #  thunderbird
+      discord
+      ungoogled-chromium
+      gnome-terminal
+      vscode
     ];
   };
 
@@ -116,16 +119,29 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    discord
-    ungoogled-chromium
-    gnome-terminal
     mission-center
     bottom
     
+    # For setting the paths automatically? E.g. for cargo to see openssl?
+    pkg-config
+    
     # Common software development packages
-    vscode
     bash
     git
+    
+    # C
+    cmake
+    libgcc
+    
+    # Raspberry Pico development
+    picotool
+    minicom
+    gcc-arm-embedded
+    
+    # Rust
+    rustup
+    openssl.dev
+    
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
