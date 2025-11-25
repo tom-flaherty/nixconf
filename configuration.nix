@@ -147,6 +147,8 @@
     minicom
     gcc-arm-embedded
     
+    picotool
+    
     # Rust
     rustup
     openssl.dev
