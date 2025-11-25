@@ -139,6 +139,7 @@
     # Python
     python313
     python313Packages.pip
+    python313Packages.west
     uv
     
     # Raspberry Pico development
