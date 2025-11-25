@@ -137,7 +137,8 @@
     libgcc
     
     # Python
-    python314
+    python313
+    python313Packages.pip
     uv
     
     # Raspberry Pico development
