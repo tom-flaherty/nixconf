@@ -113,6 +113,7 @@
       gnome-terminal
       vscode
       rhythmbox
+      helix
     ];
   };
 
