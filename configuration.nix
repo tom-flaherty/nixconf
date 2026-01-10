@@ -154,6 +154,7 @@
     # Rust
     rustup
     openssl.dev
+    rust-analyzer
     
     qbittorrent
     popsicle
