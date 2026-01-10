@@ -114,6 +114,7 @@
       vscode
       rhythmbox
       helix
+      libreoffice
     ];
   };
 
