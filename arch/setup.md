@@ -137,6 +137,7 @@ Settings -> Keyboard. Update keyboard settings
 - Keyboard settings
 - Ensure monitor is at max resolution and frame rate
 - Power -> Disable automatic suspend. Change power button function
+- Set the default browser to Firefox
 - Add the following keyboard shortcuts
 
 | Shortcut     | Command |
@@ -156,6 +157,22 @@ git config --global user.name "Your Name"
 
 Create a projects folder and pin it to the file explorer.
 
+### .bashrc
+
+Append to .bashrc file
+
+```bash
+alias gsuir="git submodule update --init --recursive"
+alias hx="helix"
+export PATH="/home/tomf/.cargo/bin:$PATH"
+```
+
+### VS Code
+
+By default vs code uses the hardware codes from your keyboard. This means that
+regardless of whether you are in colemak, it will use the qwerty keys for shortcuts.
+You can fix this by changing keyboard.dispatch from `code` to `keyCode`.
+
 ## Installs
 
 ```bash
@@ -167,6 +184,7 @@ sudo pacman -Syu \
     firefox \
     steam \
     mission-center \
+    fastfetch \
     git \
     ghostty \
     fzf \
@@ -180,6 +198,26 @@ sudo pacman -Syu \
 rustup install stable
 
 cargo install bottom
+```
+
+Some extra packages that may be useful:
+
+```bash
+# Libreoffice with British English
+sudo pacman -S \
+    libreoffice-fresh \
+    libreoffice-fresh-en-gb
+
+# Libraries for converting .md to .pdf
+sudo pacman -S \
+    pandoc-cli \
+    texlive-latexrecommended \
+    texlive-fontsrecommended \
+    texlive-xetex \
+    texlive-binextra
+sudo tlmgr install cm-super
+# You can now use:
+# pandoc setup.md --pdf-engine=xelatex -o out.pdf
 ```
 
 ### Steam
