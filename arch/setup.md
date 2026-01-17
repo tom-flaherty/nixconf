@@ -183,6 +183,8 @@ sudo pacman -Syu \
     os-prober \
     firefox \
     steam \
+    libreoffice-fresh \
+    libreoffice-fresh-en-gb \
     mission-center \
     fastfetch \
     git \
@@ -190,24 +192,33 @@ sudo pacman -Syu \
     fzf \
     helix \
     rustup \
+    rust-analyzer \
+    lldb \
     cmake \
     python-pip \
+    python-pipx \
+    jedi-language-server \
+    python-ruff \
     uv \
+    bash-language-server \
     --noconfirm
 
 rustup install stable
+cargo install bottom bat
 
-cargo install bottom
+pipx install ty
+pipx ensurepath
+```
+
+To upgrade, you can use these commands:
+```bash
+sudo pacman -Syu
+pipx upgrade-all
 ```
 
 Some extra packages that may be useful:
 
 ```bash
-# Libreoffice with British English
-sudo pacman -S \
-    libreoffice-fresh \
-    libreoffice-fresh-en-gb
-
 # Libraries for converting .md to .pdf
 sudo pacman -S \
     pandoc-cli \
