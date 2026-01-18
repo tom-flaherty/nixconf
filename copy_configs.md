@@ -1,6 +1,12 @@
 ## Ghostty
 
-
+```bash
+gio trash --force ./ghostty && \
+cp -R ~/.config/ghostty ./ghostty && \
+git add ./helix/* && \
+git commit -m "update ghostty config" && \
+git push
+```
 
 ## Helix
 

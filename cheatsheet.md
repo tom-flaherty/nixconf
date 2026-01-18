@@ -1,8 +1,76 @@
 ## Ghostty
 
-| Action                              | Shortcut                              |
+[Options Reference](https://ghostty.org/docs/config/reference)
+
+[Keybind Actions Reference](https://ghostty.org/docs/config/keybind/reference)
+
+| Action                              | Shortcut / Command                    |
 |-------------------------------------|---------------------------------------|
-| | |
+| Reload Configuration                | ctrl + shift + ,                      |
+| List fonts, list themes             | ghostty +list-fonts or +list-themes   |
+| List default keybinds               | ghostty +list-keybinds --default      |
+
+### Keybinds
+
+#### Splits
+##### Creating new split
+keybind = ctrl+shift+a=new_split:auto
+keybind = ctrl+shift+d=new_split:down
+keybind = ctrl+shift+r=new_split:right
+##### Goto split
+keybind = ctrl+shift+arrow_left=goto_split:left
+keybind = ctrl+shift+arrow_up=goto_split:up
+keybind = ctrl+shift+arrow_right=goto_split:right
+keybind = ctrl+shift+arrow_down=goto_split:down
+##### Split zoom
+keybind = ctrl+shift+z=toggle_split_zoom
+##### Resizing splits
+keybind = super+ctrl+shift+arrow_down=resize_split:down,20
+keybind = super+ctrl+shift+arrow_left=resize_split:left,20
+keybind = super+ctrl+shift+arrow_right=resize_split:right,20
+keybind = super+ctrl+shift+arrow_up=resize_split:up,20
+##### Equalise split sizing
+keybind = ctrl+shift+e=equalize_splits
+
+#### Tabs
+##### New tab
+keybind = ctrl+shift+t=new_tab
+##### Close tab 
+keybind = ctrl+shift+q=close_tab
+##### Next / previous tab
+keybind = ctrl+shift+bracket_left=previous_tab
+keybind = ctrl+shift+bracket_right=next_tab
+##### Move tab forwards or backwards
+keybind = super+ctrl+shift+bracket_left=move_tab:-1
+keybind = super+ctrl+shift+bracket_right=move_tab:1
+##### Goto tab number
+keybind = ctrl+shift+1=goto_tab:1
+keybind = ctrl+shift+2=goto_tab:2
+keybind = ctrl+shift+3=goto_tab:3
+keybind = ctrl+shift+4=goto_tab:4
+keybind = ctrl+shift+5=goto_tab:5
+keybind = ctrl+shift+6=goto_tab:6
+keybind = ctrl+shift+7=goto_tab:7
+keybind = ctrl+shift+8=goto_tab:8
+keybind = ctrl+shift+9=goto_tab:9
+
+#### Other
+##### Close surface (this may refer to a split, tab or window)
+keybind = ctrl+shift+w=close_surface
+##### Undo and redo
+keybind = ctrl+shift+u=undo
+keybind = ctrl+shift+r=redo
+##### New windor
+keybind = ctrl+shift+n=new_window
+##### Copy and paste
+keybind = ctrl+shift+c=copy_to_clipboard
+keybind = ctrl+shift+v=paste_from_clipboard
+##### Increase or decrease font size
+keybind = ctrl+equal=increase_font_size:1
+keybind = ctrl++=decrease_font_size:1
+##### Scroll by half a page
+keybind = ctrl+shift+page_up=scroll_page_fractional:-0.5
+keybind = ctrl+shift+page_down=scroll_page_fractional:0.5
 
 ## Helix
 
