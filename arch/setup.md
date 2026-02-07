@@ -179,12 +179,17 @@ By default vs code uses the hardware codes from your keyboard. This means that
 regardless of whether you are in colemak, it will use the qwerty keys for shortcuts.
 You can fix this by changing keyboard.dispatch from `code` to `keyCode`.
 
+### BTRFS Snapshots
+
+
+
 ## Installs
 
 ```bash
 sudo pacman -Syu \
     grub \
     grub-btrfs \
+    timeshift \
     efibootmgr \
     os-prober \
     firefox \
@@ -209,6 +214,7 @@ sudo pacman -Syu \
     uv \
     bash-language-server \
     marksman \
+    alsa-scarlett-gui \
     --noconfirm
 
 rustup install stable
@@ -244,7 +250,6 @@ sudo pacman -S \
     luajit
 ```
 
-
 ### Steam
 
-Configure ctrl shift O to bring up the performance overlay
+Configure ctrl shift o to bring up the performance overlay
