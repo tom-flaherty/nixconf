@@ -153,9 +153,10 @@ git config --global user.email "you@example.com"
 git config --global user.name "Your Name"
 ```
 
-### Create projects folder
+### Create folders
 
 Create a projects folder and pin it to the file explorer.
+Create a repositories folder for repos that weren't made by you.
 
 ### .bashrc
 
@@ -185,28 +186,58 @@ You can fix this by changing keyboard.dispatch from `code` to `keyCode`.
 
 ## Installs
 
+### pacman
+
 ```bash
 sudo pacman -Syu \
+```
+
+#### pacman - System
+
+```bash
     grub \
     grub-btrfs \
     timeshift \
     efibootmgr \
     os-prober \
-    firefox \
-    steam \
-    libreoffice-fresh \
-    libreoffice-fresh-en-gb \
-    mission-center \
+    man-db \
     fastfetch \
     git \
     less \
-    ghostty \
     fzf \
+```
+
+#### pacman - Apps
+
+```bash
+    firefox \
+    ghostty \
+    libreoffice-fresh \
+    libreoffice-fresh-en-gb \
+    mission-center \
+    chromium \
+    obsidian \
+    kicad \
+    kicad-library \
+    kicad-library-3d \
+```
+
+#### pacman - Gaming
+
+```bash
+    steam \
+    discord \
+```
+
+#### pacman - Coding
+
+```bash
     helix \
     rustup \
     rust-analyzer \
     lldb \
     cmake \
+    base-devel \
     python-pip \
     python-pipx \
     jedi-language-server \
@@ -214,16 +245,28 @@ sudo pacman -Syu \
     uv \
     bash-language-server \
     marksman \
+```
+
+#### pacman - Music
+
+```bash
     alsa-scarlett-gui \
-    discord \
-    chromium \
-    --noconfirm
+    rhythmbox \
+```
+
+## Other
 
 rustup install stable
 cargo install bottom bat
 
+git clone https://github.com/pop-os/popsicle.git
+cd popsicle
+make && sudo make install
+
 pipx install ty
 pipx ensurepath
+
+sudo flatpak install app/cc.arduino.IDE2/x86_64/stable
 ```
 
 To upgrade, you can use these commands:
