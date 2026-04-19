@@ -20,6 +20,14 @@ Optionally, sync pacman
 pacman -Sy
 ```
 
+## Pre-Install
+
+```bash
+pacman -Sy
+pacman-key --init
+pacman-key --refresh-keys
+```
+
 ## Install 
 ```bash
 archinstall
@@ -41,7 +49,20 @@ Disk Configuration
 - Use best effort
 - Select drive
 - Ext4
-- Separate home? Noe
+- Separate home? No
+- Partitioning
+- Delete the Ext4 partition. I only used best effort to get the EFI
+- Create partition, 20GiB linux-swap
+- Create partition, Ext4. Press enter with no size enetered to use the max size available
+- Set to /
+
+<!-- OLD DON'T USE Disk Configuration - I had issues with BTRFS not reporting disk usage correctly
+(This isn't very efficient, but it's what I did)
+- Partitioning
+- Use best effort
+- Select drive
+- Ext4
+- Separate home? No
 - Partitioning
 - Delete the Ext4 partition. I only used best effort to get the EFI
 - Create partition, 8GiB linux-swap
@@ -54,7 +75,7 @@ Disk Configuration
 | @              | /                     |
 | @home          | /home                 |
 | @log           | /var/log              |
-| @pkg           | /var/cache/pacman/pkg |
+| @pkg           | /var/cache/pacman/pkg | -->
 
 Swap -> Enable ZRAM
 
@@ -188,6 +209,19 @@ You can fix this by changing keyboard.dispatch from `code` to `keyCode`.
 
 ### pacman
 
+First, enable the multilib library.
+
+```bash
+sudo nano /etc/pacman.conf
+```
+
+Uncomment these lines
+
+```
+[multilib]
+Include = /etc/pacman.d/mirrorlist
+```
+
 ```bash
 sudo pacman -Syu \
 ```
@@ -262,18 +296,27 @@ sudo pacman -Syu \
 
 ## Other
 
+```bash
 rustup install stable
 cargo install bottom bat cargo-binstall
 cargo binstall --strategies crate-meta-data jj-cli
+```
 
+```bash
+rustup toolchain install 1.70.0-x86_64-unknown-linux-gnu
 git clone https://github.com/pop-os/popsicle.git
 cd popsicle
 make && sudo make install
+```
 
+```bash
 pipx install ty
 pipx ensurepath
+```
 
+```bash
 sudo flatpak install app/cc.arduino.IDE2/x86_64/stable
+```
 
 Install the [nix package manager]() for reproducible builds:
 
@@ -313,4 +356,8 @@ sudo pacman -S \
 
 ### Steam
 
-Configure ctrl shift o to bring up the performance overlay
+Configure ctrl shift o to bring up the performance overlay. (In the In Game section)
+
+Configure steam to boot into library (In the Interface section).
+
+Limit download speed to 40000 so that other applications can still use WiFi.
